@@ -10,11 +10,10 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-Route::view('create','create')->name('create');
 Route::post('create','StudentController@store')->name('store');
 Route::get('edit/{id}','StudentController@edit')->name('edit');
+Route::get('create','StudentController@create')->name('create');
+
 Route::post('update/{id}','StudentController@update')->name('update');
 Route::delete('delete/{id}','StudentController@delete')->name('delete');
 Route::get('/','StudentController@index')->name('home');

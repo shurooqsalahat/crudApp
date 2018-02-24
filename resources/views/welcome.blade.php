@@ -8,6 +8,12 @@
                 <strong>Well done!</strong> {{ session('successMsg') }}
             </div>
         @endif
+            @if (session('errorMsg'))
+                <div class="alert alert-dismissible alert-danger">
+                    <button type="button" class="close" data-dismiss="alert">×</button>
+                    <strong>Error !!</strong> {{ session('errorMsg') }}
+                </div>
+            @endif
         <table class="table table-bordered table-striped table-hover ">
             <thead>
             <tr>
