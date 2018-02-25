@@ -33,8 +33,8 @@
                     <td>{{ $student->last_name }}</td>
                     <td>{{ $student->email }}</td>
                     <td>{{ $student->phone }}</td>
-                    <td class="text-center"><a class="btn btn-raised btn-primary btn-sm" href="{{ route('edit',$student->id) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> ||
-                        <form method="POST" id="delete-form-{{ $student->id }}" action="{{ route('delete',$student->id) }}" style="display: none;">
+                    <td class="text-center"><a class="btn btn-raised btn-primary btn-sm" href="{{ route('students.edit',$student->id) }}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> ||
+                        <form method="POST" id="delete-form-{{ $student->id }}" action="{{ route('students.destroy',$student->id) }}" style="display: none;">
                             {{ csrf_field() }}
                             {{ method_field('delete') }}
 

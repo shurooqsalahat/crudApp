@@ -16,7 +16,8 @@
                 <h3 class="panel-title">Edit  Student</h3>
             </div>
             <div class="panel-body">
-                {{Form::open(array('route' =>  array('update', $student->id)),['class'=>'form-horizontal'])}}
+
+                {{Form::open(array('route' =>  array('students.update', $student->id), 'method' => 'put'))}}
                 @include('layouts.form')
                 {{ Form::close() }}
 

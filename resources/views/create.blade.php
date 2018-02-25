@@ -16,7 +16,7 @@
                 <h3 class="panel-title">Add New Student</h3>
             </div>
             <div class="panel-body">
-               {{Form::open(array('route' => 'store'),['class'=>'form-horizontal'])}}
+               {{Form::open(array('route' => 'students.store'),['class'=>'form-horizontal'])}}
                     @include('layouts.form')
                 {{ Form::close() }}
 
